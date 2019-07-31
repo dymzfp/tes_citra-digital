@@ -10,7 +10,8 @@ func main() {
 }
 
 func alphabet(w string) {
-	arrWord := strings.Split(w, "")
+	word := strings.Replace(w, " ", "", -1)
+	arrWord := strings.Split(word, "")
 	vocal := []string{"a", "i", "u", "e", "o"}
 	var arrVocal []string
 	var arrConst []string
