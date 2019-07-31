@@ -37,10 +37,6 @@ func alphabet(w string) {
 		}
 	}
 
-	fmt.Println("huruf mati :", count(arrConst))
-	fmt.Println("huruf hidup :", count(arrVocal))
-}
-
-func count(s []string) int {
-	return len(s)
+	fmt.Println("huruf mati :", len(arrConst))
+	fmt.Println("huruf hidup :", len(arrVocal))
 }
