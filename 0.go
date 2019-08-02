@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	alphabet("oma ma")
+	alphabet("omama")
 }
 
 func alphabet(w string) {

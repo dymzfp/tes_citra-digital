@@ -13,13 +13,15 @@ type Hasil struct {
 }
 
 func main() {
+	port := "1234"
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("Welcome"))
 	})
 	http.HandleFunc("/count", HandleCount)
 
-	fmt.Println("Server running")
-	http.ListenAndServe(":1234", nil)
+	fmt.Println("Server running", port)
+	http.ListenAndServe(":"+port, nil)
 }
 
 func HandleCount(w http.ResponseWriter, r *http.Request) {
@@ -71,7 +73,7 @@ func countAlpha(w string) (x, y int) {
 		}
 	}
 
-	x = len(arrConst)
-	y = len(arrVocal)
+	x = len(arrVocal)
+	y = len(arrConst)
 	return	
 }
